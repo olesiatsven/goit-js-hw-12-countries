@@ -1,8 +1,8 @@
-import debounce from 'lodash';
+import debounce from '../node_modules/lodash.debounce';
 import { defaults, info, success, error } from '@pnotify/core';
 import '@pnotify/core/dist/PNotify.css';
-
-// import './main.scss';
+import '@pnotify/core/BrightTheme.css';
+import './main.scss';
 import countriesAPI from './js/fetchCountries';
 import  getRefs from './js/getRefs'
 import onlyCountryTemplate from './templates/only-country.hbs';
@@ -10,7 +10,7 @@ import listCountriesTemplate from './templates/list-countries.hbs';
 
 defaults.delay = 1000;
 
-const refs =  getRefs();
+const refs = getRefs();
 
 refs.inputSearch.addEventListener('input', debounce(searchCountry, 500));
 
@@ -18,7 +18,7 @@ function searchCountry() {
   refs.container.innerHTML = '';
   if (refs.inputSearch.value !== '') {
     return countriesAPI
-      .fetchCountries(ref.inputSearch.value)
+      .fetchCountries(refs.inputSearch.value)
       .then(data => renderCountries(data))
       .catch((err) => {
         console.warn(err)

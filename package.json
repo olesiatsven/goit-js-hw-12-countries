@@ -39,7 +39,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "pnotify": "^5.2.0",
     "postcss-loader": "^4.0.2",
-    "sass-loader": "^10.0.2",
+    "sass-loader": "^10.2.0",
     "url-loader": "^4.1.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
@@ -49,9 +49,12 @@
   },
   "dependencies": {
     "@pnotify/core": "^5.2.0",
+    "chokidar": "^3.5.1",
     "core-js": "^3.6.5",
     "handlebars": "^4.7.6",
     "lodash": "^4.17.21",
+    "lodash.debounce": "^4.0.8",
+    "node-sass": "^6.0.0",
     "style-loader": "^2.0.0"
   }
 }
